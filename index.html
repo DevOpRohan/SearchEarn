@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Query Tabs</title>
+  <script>
+    function openSearchTabs() {
+      const searchList = [
+        "Top 10 travel destinations in Europe",
+        "Beginner's guide to gardening",
+        "Best action movies of all time",
+        "Healthy smoothie recipes",
+        "Introduction to machine learning",
+        "Tips for improving productivity",
+        "Famous historical landmarks",
+        "Guide to buying a new car",
+        "Delicious dessert recipes",
+        "Benefits of regular exercise",
+        "Tips for effective public speaking",
+        "Popular fashion bloggers",
+        "Introduction to cryptocurrency",
+        "Tips for stress management",
+        "Most popular book genres",
+        "Home decorating ideas on a budget",
+        "Famous world cuisines",
+        "Essential hiking gear",
+        "Tips for successful job interviews",
+        "Mindfulness and meditation techniques",
+        "Classic novels everyone should read",
+        "DIY home organization hacks",
+        "Tips for learning a musical instrument",
+        "Introduction to sustainable fashion",
+        "Healthy snack ideas",
+        "Famous art movements",
+        "Guide to home buying process",
+        "Delicious vegetarian recipes",
+        "Benefits of practicing yoga",
+        "Tips for improving memory",
+        "Fashion trends for the upcoming season"
+      ];
+
+      const searchEngine = "https://www.bing.com/search?q=";
+
+      searchList.forEach((searchString, index) => {
+        const newTab = window.open(searchEngine + encodeURIComponent(searchString));
+
+        setTimeout(() => {
+          newTab.close();
+        }, 30000 * (index + 1));
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Search Query Tabs</h1>
+  <button onclick="openSearchTabs()">Open Search Queries</button>
+</body>
+</html>
